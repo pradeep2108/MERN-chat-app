@@ -9,6 +9,8 @@ import {
   Tabs,
 } from "@chakra-ui/react";
 import React from "react";
+import Login from "../components/Authentication/Login";
+import SignUp from "../components/Authentication/SignUp";
 
 const Homepage = () => {
   return (
@@ -28,18 +30,25 @@ const Homepage = () => {
           Buzz Chat
         </Text>
       </Box>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+      <Box
+        bg="white"
+        w="100%"
+        p={4}
+        borderRadius="lg"
+        color="black"
+        borderWidth="1px"
+      >
         <Tabs variant="soft-rounded" colorScheme="green">
-          <TabList>
-            <Tab>Login</Tab>
-            <Tab>Sign Up</Tab>
+          <TabList mb="1em">
+            <Tab width="50%">Login</Tab>
+            <Tab width="50%">Sign Up</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
-              <p>one!</p>
+              <Login />
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <SignUp />
             </TabPanel>
           </TabPanels>
         </Tabs>
